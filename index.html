@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <title>Focus Timer 2.0</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-svg">
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <button id="toggle-mode">
+            <span class="sr-only">Ativar Light Mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+        <div class="timer-container">
+            <div id="timer" class="timer">
+                <span id="minutes" class="minutes">00</span>
+                <span>:</span>
+                <span id="seconds" class="seconds">00</span>
+            </div>
+            <div id="controls" class="timer-controls">
+                <button 
+                    class="ph ph-play-circle"
+                    data-action="toggleRunning">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+                <button 
+                    class="ph ph-stop-circle"
+                    data-action="reset"
+                 />
+                <button 
+                    class="ph ph-plus-circle"
+                    data-action="increaseTimer"
+                />
+                <button 
+                    class="ph ph-minus-circle"
+                    data-action="decreaseTimer"
+                />
+            </div>
+        </div>
+        <div id="sounds" class="sound-container">
+            <button 
+                class="button-wrapper ph ph-tree" 
+                data-action="playTree"
+            />
+            <button 
+                class="button-wrapper ph ph-cloud-rain playing"
+                data-action="playRain"
+            />
+            <button 
+                class="button-wrapper ph ph-storefront"
+                data-action="playCoffee"
+            />
+            <button 
+                class="button-wrapper ph ph-flame"
+                data-action="playFlame"
+            />
+        </div>
+    </div>
+</body>
+</html>

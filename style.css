@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {    
+
+    --text-color: #E1E1E6;
+    --text-button-color: #02799D;    
+    --bg-button-color: #E1E1E6;
+    --button-hover: #02799D;
+    --bg-color: #000;
+    
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);    
+
+}
+
+html.light {
+    --text-color: #E1E1E6;
+    --text-button-color: #373832;    
+    --button-color: #535353;
+    --button-hover: #02799D;
+    --bg-color: #fff;
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 5rem;
+    line-height: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: none;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+.ph-sun:hover, .ph-moon:hover {
+    color: #efa46f;
+    transform: scale(1.5) rotate(20deg);
+    opacity: .8;
+}
+
+body {
+
+    color: var(--text-color);    
+    background-color: var(--bg-color);
+
+    display: grid;    
+    height: 100vh;
+    place-content: center;
+
+}
+
+button {
+    cursor: pointer;    
+}
+
+.app {
+    display: flex;
+    justify-items: center;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 9.6rem;
+    margin-right: 19.2rem;
+}
+ .timer {
+    display: flex;    
+    font-size: 12.6rem;
+    font-weight: medium;
+    font-family: 'Roboto', sans-serif;
+ }
+
+.timer-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.timer-controls button {
+    border: none;
+    background-color: var(--bg-button);
+    color: var(--text-button-color);
+    font-size: 5rem;
+}
+
+.timer-controls button:hover {
+    color: var(--text-color);
+}
+
+.sound-container {
+    display: flex;    
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    width: 30.8rem;
+    height: 33.6rem;    
+}
+
+.sound-container button {
+    border: none;
+    border-radius: 2.4rem;
+    width: 13.8rem;
+    height: 15.2rem;
+    color: var(--bg-color)
+}
+
+.sound-container button:hover {
+    background-color: var(--button-hover);
+    color: var(--text-color);
+    transform: back-ground 3ms;
+}
+
+.sound-container button.playing {
+    background-color: var(--button-hover);
+    color: var(--text-color);
+}
+
+.button-wrapper {
+    color: var(--text-button-color);
+    font-size: 6rem;
+    background-color: var(--bg-button-color);
+}
+
